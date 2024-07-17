@@ -24,7 +24,7 @@
 
         <!-- Main content -->
         <section class="content d-none">
-            <div class="container-fluid">
+            <div class="container-fluid d-none">
                 <!-- Info boxes -->
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-3">
