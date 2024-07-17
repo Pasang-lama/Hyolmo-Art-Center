@@ -12,7 +12,7 @@
 </section>
 <div class="profile-dashboard-section  custom-margin">
     <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4 d-none">
             <div class="col-lg-3 col-md-4 col-sm-12">
                 @include('frontend.customer.sidebar')
             </div>
@@ -71,6 +71,8 @@
 
             </div>
         </div>
+
+        <h1 class="text-center py-5">Welcome to Hyolmo Art Center </h1>
 
     </div>
 </div>
