@@ -36,15 +36,6 @@ $(document).ready(function() {
     })
   });
 
-// $('.ratings').attr('data-rating',function()
-// {
-//     var id=$(this).attr('id');
-//     var data_rating=$(this).attr('data-rating');
-//     for (let i = 0; i < data_rating; i++) {
-
-// $(".ratings#"+id+"").append( "<i class='fas fa-star'></i>" );
-//       }
-// });
   $('.orderItemsShow').on("click", function() {
    var id=$(this).attr('slug-data');
    $.ajax({
@@ -270,7 +261,6 @@ $(document).ready(function() {
   }
   /* product search ends */
 
-  //Add to Cart
   $(document).on('click', '.addToCartAjax', function(e) {
     e.preventDefault();
 
@@ -349,16 +339,6 @@ $(document).ready(function() {
     });
   });
 
-  if ($("#priceRange").length > 0) {
-    var slider = document.getElementById("priceRange");
-    slider.step = "100";
-    var output = document.getElementById("selectedprice");
-    output.innerHTML = inrNumberFormat(slider.value);
-    slider.oninput = function() {
-      output.innerHTML = inrNumberFormat(this.value);
-      productSearch('');
-    }
-  }
   if ($("#provience").length > 0) {
     getDistricts();
     $('#provience').on('change', function() {
@@ -532,6 +512,18 @@ $(document).ready(function() {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows:false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+
+    ]
   });
   $(".products-images-nav").slick({
     slidesToShow: 4,
@@ -541,83 +533,8 @@ $(document).ready(function() {
     nextArrow: " <button type='button' class='slick-next'><i class='fas fa-angle-right'></i></button>",
   });
 
-  // product details preview slider
-  $(".products-images-nav").slick({
-    slidesToShow: 4,
-    slidesToScroll: 3,
-    arrows: true,
-    prevArrow: " <button type='button' class='slick-prev'><i class='fas fa-angle-left'></i></button>",
-    nextArrow: " <button type='button' class='slick-next'><i class='fas fa-angle-right'></i></button>",
-  });
 
-  // Popup Video
-  $(".vpop").on("click", function(e) {
-    e.preventDefault();
-    $(
-      "#video-popup-overlay,#video-popup-iframe-container,#video-popup-container,#video-popup-close"
-    ).show();
-    var srchref = "",
-      autoplay = "",
-      id = $(this).data("id");
-    if ($(this).data("type") == "vimeo")
-      var srchref = "//player.vimeo.com/video/";
-    else if ($(this).data("type") == "youtube")
-      var srchref = "https://www.youtube.com/embed/";
-    if ($(this).data("autoplay") == true) autoplay = "?autoplay=1";
-    $("#video-popup-iframe").attr("src", srchref + id + autoplay);
-    $("#video-popup-iframe").on("load", function() {
-      $("#video-popup-container").show();
-    });
-  });
-  $("#video-popup-close, #video-popup-overlay").on("click", function(e) {
-    $(
-      "#video-popup-iframe-container,#video-popup-container,#video-popup-close,#video-popup-overlay"
-    ).hide();
-    $("#video-popup-container").attr("src", "");
-  });
-  // tooltip
-  const tooltipTriggerList = document.querySelectorAll(
-    '[data-bs-toggle="tooltip"]'
-  );
-  const tooltipList = [...tooltipTriggerList].map(
-    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-  );
-  // toggle search bar
-  $(".sticky-search-icon").click(function() {
-    $(".search-box").toggle();
 
-    // zoom on hover
-    const product = document.getElementById("product-main-images");
-    const img = document.getElementById("products-images");
-    product.addEventListener("mousemove", (e) => {
-      const x = e.clientX - e.target.offsetLeft;
-      const y = e.clientY - e.target.offsetTop;
-      //   console.log(x,y);
-      img.style.transformOrigin = `${x}px ${y}px`;
-      img.style.transform = "scale(1.9)";
-    });
-    product.addEventListener("mouseleave", () => {
-      img.style.transformOrigin = "center";
-      img.style.transform = "scale(1)";
-    });
-    //adding active class on product preview images list
-    $(document).on("click", ".product-preview-list", function() {
-      $(".product-preview-list").removeClass("active");
-      $(this).addClass("active");
-      var $pic = $(this).find('img');
-      $('.picZoomer-pic').attr('src', $pic.attr('src'));
-    });
-    //  adding active class on navigation bar
-    $(document).on("click", "#navbarSupportedContent ul li a ", function() {
-      $("#navbarSupportedContent ul li a").removeClass("active");
-      $(this).addClass("active");
-    });
-    //  Adding active class on sizes of product categories page
-    $(document).on("click", ".sizes button", function() {
-      $(".sizes button").removeClass("active");
-      $(this).addClass("active");
-    });
-  });
   // animation while scrolling
   $(".about-right").waypoint(
     function(direction) {

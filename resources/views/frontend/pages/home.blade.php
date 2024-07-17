@@ -28,7 +28,7 @@
 <section class="about-us custom-margin">
    <div class="container">
       <div class="row align-items-center  gy-4">
-         <div class="col-md-6 col-sm-12  wow fadeInLeft animated">
+         <div class="col-lg-6 col-sm-12  wow fadeInLeft animated">
             <div class="heading">
                <h1>About us Hyolmo Art Center</h1>
             </div>
@@ -39,7 +39,7 @@
                <a href="{{ route('frontend.aboutus') }}"> Read more</a>
             </div>
          </div>
-         <div class="col-md-6 col-sm-12  wow fadeInRight animated ">
+         <div class="col-lg-6 col-sm-12  wow fadeInRight animated ">
             <figure>
                <img class="d-block w-100" src="{{ ($aboutus->about_us_image != '') && file_exists(public_path('images/aboutus/'.$aboutus->about_us_image)) ? asset('images/aboutus/'.$aboutus->about_us_image) :'images/default.png' }}" alt="About us">
             </figure>
