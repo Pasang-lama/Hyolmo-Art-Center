@@ -496,6 +496,10 @@ header {
   header .navbar {
     background-color: transparent !important;
     padding: 5px 0px !important; }
+    header .navbar .logo {
+      display: block !important;
+      width: fit-content !important;
+      height: fit-content !important; }
     header .navbar img {
       display: block;
       object-fit: cover;
