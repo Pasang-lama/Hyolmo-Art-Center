@@ -497,7 +497,7 @@ header {
     background-color: transparent !important;
     padding: 5px 0px !important; }
     header .navbar figure {
-      width: fit-content;
+      width: fit-content !important;
       height: 130px;
       overflow: hidden;
       margin: 0px !important;
@@ -570,6 +570,7 @@ header.sticky-header {
   box-shadow: 0px 0px 4px gray; }
   header.sticky-header figure {
     height: 80px;
+    width: fit-content !important;
     filter: brightness(0) invert(1) !important; }
   header.sticky-header .navbar-collapse .navbar-nav .nav-item .nav-link {
     color: white !important; }

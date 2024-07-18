@@ -13,7 +13,7 @@ header {
         padding: 5px 0px !important;
 
         figure {
-            width: fit-content;
+            width: fit-content !important;
             height: 130px;
             overflow: hidden;
             margin: 0px !important;
@@ -121,6 +121,7 @@ header.sticky-header {
     box-shadow: 0px 0px 4px gray;
     figure {
        height: 80px;
+       width: fit-content !important;
        filter: brightness(0) invert(1) !important;
     }
     .navbar-collapse {
