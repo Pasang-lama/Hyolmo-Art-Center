@@ -497,9 +497,10 @@ header {
     background-color: transparent !important;
     padding: 5px 0px !important; }
     header .navbar img {
+      display: block;
       object-fit: cover;
       width: fit-content !important;
-      height: 130px;
+      height: 130px !important;
       overflow: hidden;
       margin: 0px !important;
       filter: brightness(0) invert(1);
@@ -509,7 +510,7 @@ header {
           filter: none; } }
       @media (max-width: 767px) {
         header .navbar img {
-          height: 100px; } }
+          height: 100px !important; } }
     header .navbar .navbar-toggler {
       background-color: #991B1C !important;
       color: white !important; }
