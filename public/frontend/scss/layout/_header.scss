@@ -12,28 +12,24 @@ header {
         background-color: transparent !important;
         padding: 5px 0px !important;
 
-        figure {
-            width: fit-content !important;
-            height: 130px;
-            overflow: hidden;
-            margin: 0px !important;
-            filter: brightness(0) invert(1);
-            transition: all 0.3s linear;
-
-            @media (max-width: 991px) {
-                filter: none;
-            }
-
-            @media (max-width: 767px) {
-                height: 100px;
-            }
 
             img {
-                height: 100%;
-                width: 100%;
                 object-fit: cover;
+                width: fit-content !important;
+                height: 130px;
+                overflow: hidden;
+                margin: 0px !important;
+                filter: brightness(0) invert(1);
+                transition: all 0.3s linear;
+    
+                @media (max-width: 991px) {
+                    filter: none;
+                }
+    
+                @media (max-width: 767px) {
+                    height: 100px;
+                }
             }
-        }
 
         .navbar-toggler {
             background-color: $secondary-color !important;
@@ -119,7 +115,7 @@ header.sticky-header {
     position: sticky;
     top: 0px;
     box-shadow: 0px 0px 4px gray;
-    figure {
+    img {
        height: 80px;
        width: fit-content !important;
        filter: brightness(0) invert(1) !important;

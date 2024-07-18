@@ -2,11 +2,9 @@
     <div class="main-header ">
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container">
-                <figure>
                     <a class="navbar-brand" href="{{ route('home') }}">
                         <img src="{{ asset('frontend/images/logo.png') }}" alt="{{ env('APP_NAME') }}">
                     </a>
-                </figure>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
