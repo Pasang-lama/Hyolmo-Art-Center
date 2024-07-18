@@ -10,14 +10,9 @@ use File, Image;
 class AboutUsController extends Controller
 {
     private $upload_path;
-    private $width;
-    private $height;
-
     public function __construct()
     {
         $this->upload_path = public_path("images/aboutus/");
-        $this->width = 636;
-        $this->height = 398;
         $this->middleware(["XssSanitizer"]);
     }
 
@@ -43,7 +38,7 @@ class AboutUsController extends Controller
                 "about_us_description.required" =>
                     "About us description is required",
                 "about_us_image.mimes" =>
-                    "About us image must have image with extension jpeg,png,jpg,gif"
+                    "About us image must have image with extension jpeg,png,jpg,gif,webp"
             ]
         );
 
@@ -61,7 +56,6 @@ class AboutUsController extends Controller
             );
 
             Image::make($img_tmp->getRealPath())
-                ->resize($this->width, $this->height)
                 ->save($this->upload_path . $filename);
 
             $aboutUs->about_us_image = $filename;
