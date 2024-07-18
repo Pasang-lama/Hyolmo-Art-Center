@@ -700,10 +700,12 @@ footer {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    margin: 0px !important; }
+    margin: 0px !important;
+    max-height: 400px;
+    background-color: gray; }
     .about-us figure img {
       height: 100%;
-      object-fit: cover; }
+      object-fit: scale-down !important; }
 
 .trending-section {
   margin-bottom: 100px; }
