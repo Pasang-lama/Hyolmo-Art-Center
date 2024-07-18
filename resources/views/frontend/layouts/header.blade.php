@@ -2,32 +2,28 @@
     <div class="main-header ">
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">
-                    <figure><img src="{{ asset('frontend/images/logo.png') }}" alt="{{ env('APP_NAME') }}"></figure>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <figure>
+                    <a class="navbar-brand" href="{{ route('home') }}">
+                        <img src="{{ asset('frontend/images/logo.png') }}" alt="{{ env('APP_NAME') }}">
+                    </a>
+                </figure>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('/') ? 'active' : '' }}"
-                                href="{{ route('home') }}">Home</a>
+                            <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}"
-                                href="{{ route('frontend.aboutus') }}">About us</a>
+                            <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}" href="{{ route('frontend.aboutus') }}">About us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('blogs') ? 'active' : '' }}"
-                                href="{{ route('frontend.blogs') }}"> Latest Blogs
+                            <a class="nav-link {{ request()->is('blogs') ? 'active' : '' }}" href="{{ route('frontend.blogs') }}"> Latest Blogs
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
-                                href="{{ route('contact') }}">
+                            <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
                                 Contact us
                             </a>
                         </li>
