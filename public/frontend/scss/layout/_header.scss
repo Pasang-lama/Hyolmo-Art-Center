@@ -121,5 +121,28 @@ header.sticky-header {
     box-shadow: 0px 0px 4px gray;
     figure {
        height: 80px;
+       filter: brightness(0) invert(1) !important;
+    }
+    .navbar-collapse {
+
+        .navbar-nav {
+          
+
+            .nav-item {
+
+                .nav-link {
+                    color: white !important;
+                
+                }
+
+                .active {
+                    color: white !important;
+                }
+            }
+        }
+
+        .contact-number {
+            color: white !important;
+        }
     }
 }
