@@ -495,6 +495,7 @@ header {
     background-color: transparent !important;
     padding: 5px 0px !important; }
     header .navbar figure {
+      width: fit-content;
       height: 130px;
       overflow: hidden;
       margin: 0px !important;
@@ -561,18 +562,12 @@ header {
         font-size: 16px; }
 
 header.sticky-header {
-  background-color: white;
+  background-color: #424242;
   position: sticky;
   top: 0px;
   box-shadow: 0px 0px 4px gray; }
   header.sticky-header figure {
-    filter: none; }
-  header.sticky-header .navbar-collapse .navbar-nav .nav-item .nav-link {
-    color: black !important; }
-  header.sticky-header .navbar-collapse .navbar-nav .nav-item .active {
-    color: black !important; }
-  header.sticky-header .navbar-collapse .contact-number {
-    color: black; }
+    height: 80px; }
 
 footer {
   background: #424242; }
@@ -701,7 +696,7 @@ footer {
     width: 100%;
     overflow: hidden;
     margin: 0px !important;
-    max-height: 400px;
+    max-height: 500px;
     background-color: gray; }
     .about-us figure img {
       height: 100%;
@@ -1664,34 +1659,34 @@ footer {
       object-fit: scale-down;
       padding: 5px; }
 
-.blog-section .blog-content-page p img {
+.blog-content-page p img {
   margin: 20px 0px;
   width: 100%; }
-.blog-section .blog-content-page h1,
-.blog-section .blog-content-page h2,
-.blog-section .blog-content-page h3,
-.blog-section .blog-content-page h4,
-.blog-section .blog-content-page h5,
-.blog-section .blog-content-page h6 {
+.blog-content-page h1,
+.blog-content-page h2,
+.blog-content-page h3,
+.blog-content-page h4,
+.blog-content-page h5,
+.blog-content-page h6 {
   color: #991B1C;
   margin-top: 20px !important;
   font-weight: 600 !important;
   font-size: 20px !important;
   line-height: 21px !important;
   padding-bottom: 10px !important; }
-.blog-section .blog-content-page ol {
+.blog-content-page ol {
   margin: 10px 18px !important; }
-  .blog-section .blog-content-page ol li {
+  .blog-content-page ol li {
     padding: 5px 0px; }
-    .blog-section .blog-content-page ol li::marker {
+    .blog-content-page ol li::marker {
       color: #991B1C;
       font-weight: 700; }
-.blog-section .blog-content-page ul {
+.blog-content-page ul {
   margin: 10px 0px !important; }
-  .blog-section .blog-content-page ul li {
+  .blog-content-page ul li {
     padding: 5px 0px;
     display: flex; }
-    .blog-section .blog-content-page ul li::before {
+    .blog-content-page ul li::before {
       content: "\f111";
       font-family: "Font Awesome 5 free";
       font-weight: 900;
@@ -1699,19 +1694,19 @@ footer {
       padding-right: 10px;
       line-height: 25px;
       color: #991B1C; }
-.blog-section .blog-content-page blockquote {
+.blog-content-page blockquote {
   margin: 40px 0px 40px 0px;
   padding: 10px 20px 10px 30px;
   border-left: 3px solid #991B1C;
   background: rgba(27, 100, 153, 0.1); }
-  .blog-section .blog-content-page blockquote p {
+  .blog-content-page blockquote p {
     font-style: italic;
     color: #000000;
     font-size: 18px !important;
     line-height: 26px !important;
     font-weight: 400 !important;
     position: relative; }
-  .blog-section .blog-content-page blockquote .auther {
+  .blog-content-page blockquote .auther {
     font-size: 20px;
     color: #991B1C;
     font-weight: 500;

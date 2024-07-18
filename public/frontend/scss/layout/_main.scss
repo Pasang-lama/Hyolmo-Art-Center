@@ -68,13 +68,12 @@
 
 .about-us {
     overflow: hidden !important;
-
     figure {
         height: 100%;
         width: 100%;
         overflow: hidden;
         margin: 0px !important;
-        max-height: 400px;
+        max-height: 500px;
         background-color: gray;
         img {
             height: 100%;
@@ -1472,7 +1471,6 @@
     }
 }
 
-.blog-section {
 
     .blog-content-page {
         p {
@@ -1552,7 +1550,6 @@
             }
         }
     }
-}
 
 .same-as-billing-address {
     display: flex;

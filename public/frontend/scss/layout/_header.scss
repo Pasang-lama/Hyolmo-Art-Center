@@ -13,6 +13,7 @@ header {
         padding: 5px 0px !important;
 
         figure {
+            width: fit-content;
             height: 130px;
             overflow: hidden;
             margin: 0px !important;
@@ -114,26 +115,11 @@ header {
 }
 
 header.sticky-header {
-    background-color: white;
+    background-color: #424242;
     position: sticky;
     top: 0px;
     box-shadow: 0px 0px 4px gray;
     figure {
-        filter: none;
-    }
-    .navbar-collapse {
-        .navbar-nav {
-            .nav-item {
-                .nav-link {
-                    color: black !important;
-                }
-                .active {
-                    color: black !important;
-                }
-            }
-        }
-        .contact-number {
-            color: black;
-        }
+       height: 80px;
     }
 }

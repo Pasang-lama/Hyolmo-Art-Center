@@ -246,7 +246,7 @@
 <section class="new-feature custom-margin wow fadeInDown animated">
    <div class="container ">
       <div class="row align-items-center row-contain">
-         <div class="col-lg-6 col-md-6 col-sm-12 text-contain  animated fadeInLeft wow ">
+         <div class="col-lg-6 col-md-6 col-sm-12 blog-content-page animated fadeInLeft wow ">
             {!! $homepageextras->homepageextra_shortdescription !!}
             <div class="button mt-5">
                <a @if($homepageextras->homepageextra_shortdescriptionlink != '') href="{{ $homepageextras->homepageextra_shortdescriptionlink }}" target="_blank" @endif>
