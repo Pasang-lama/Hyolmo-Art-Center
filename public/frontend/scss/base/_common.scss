@@ -146,7 +146,7 @@ p {
         padding: 10px 20px;
         background-color: $secondary-color;
         transition: all 0.3s linear;
-
+white-space: nowrap;
         @media (max-width: 480px) {
             padding: 10px 15px;
         }
@@ -273,7 +273,7 @@ p {
         border: none;
         transition: background-color 0.3s linear;
         min-width: 200px;
-
+        white-space: nowrap;
         &:hover {
             background-color: $primary-color;
         }

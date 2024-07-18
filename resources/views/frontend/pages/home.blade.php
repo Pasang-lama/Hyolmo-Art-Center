@@ -257,7 +257,7 @@
          </div>
          @if($homepageextras->homepageextra_shortdescriptionimg != '' && file_exists(public_path('images/homepageextra/'.$homepageextras->homepageextra_shortdescriptionimg)))
          <div class="col-lg-6 col-md-6 col-sm-12 image-contain animated fadeInRight wow ">
-            <figure>
+            <figure class="pt-md-5">
                <img class="d-block w-100" src="{{ asset('images/homepageextra/'.$homepageextras->homepageextra_shortdescriptionimg) }}" alt="{{ env('APP_NAME') }}">
             </figure>
          </div>

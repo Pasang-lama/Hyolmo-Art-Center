@@ -122,7 +122,8 @@ p {
   text-decoration: none;
   padding: 10px 20px;
   background-color: #991B1C;
-  transition: all 0.3s linear; }
+  transition: all 0.3s linear;
+  white-space: nowrap; }
   @media (max-width: 480px) {
     .button a {
       padding: 10px 15px; } }
@@ -214,7 +215,8 @@ p {
     padding: 10px;
     border: none;
     transition: background-color 0.3s linear;
-    min-width: 200px; }
+    min-width: 200px;
+    white-space: nowrap; }
     .submit-button button:hover {
       background-color: #1B6499; }
 
