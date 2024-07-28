@@ -492,18 +492,20 @@ header {
   header .navbar {
     background-color: transparent !important;
     padding: 5px 0px !important; }
-    header .navbar img {
-      display: block;
-      object-fit: contain !important;
-      width: fit-content !important;
-      height: 100px !important;
-      overflow: hidden;
-      margin: 0px !important;
-      filter: brightness(0) invert(1);
-      transition: all 0.3s linear; }
-      @media (max-width: 767px) {
-        header .navbar img {
-          height: 70px !important; } }
+    header .navbar .logo {
+      display: inline-block;
+      max-width: 200px; }
+      header .navbar .logo img {
+        object-fit: contain !important;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0px !important;
+        filter: brightness(0) invert(1);
+        transition: all 0.3s linear; }
+        @media (max-width: 767px) {
+          header .navbar .logo img {
+            height: 70px !important; } }
     header .navbar .navbar-toggler {
       background-color: #991B1C !important;
       color: white !important; }

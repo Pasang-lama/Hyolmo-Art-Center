@@ -8,19 +8,23 @@ header {
     .navbar {
         background-color: transparent !important;
         padding: 5px 0px !important;
-        img {
-            display: block;
-            object-fit: contain !important;
-            width: fit-content !important;
-            height: 100px !important;
-            overflow: hidden;
-            margin: 0px !important;
-            filter: brightness(0) invert(1);
-            transition: all 0.3s linear;
-            @media (max-width: 767px) {
-                height: 70px !important;
+        .logo {
+            display: inline-block;
+            max-width: 200px; 
+            img {
+                object-fit: contain !important;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0px !important;
+                filter: brightness(0) invert(1);
+                transition: all 0.3s linear;
+                @media (max-width: 767px) {
+                    height: 70px !important;
+                }
             }
         }
+    
 
         .navbar-toggler {
             background-color: $secondary-color !important;
