@@ -496,7 +496,7 @@ class FrontendController extends Controller
             }
         } catch (\Exception $e) {
             if ($request->ajax()) {
-                return response()->json(["error" => "Contact message cannotnot sent. Please try again"]);
+                return response()->json(["error" => "Contact message cannotnot sent. Please try again, $e"]);
             } else {
                 return redirect()->back()->with(
                     "error_msg",
