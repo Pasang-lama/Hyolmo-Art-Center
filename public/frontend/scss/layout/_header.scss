@@ -3,37 +3,22 @@ header {
     position: fixed;
     top: 0px;
     width: 100%;
-
-    @media (max-width: 991px) {
-        position: relative;
-        background-color: white;
-        z-index: 99999;
-    }
+    z-index: 99999;
 
     .navbar {
         background-color: transparent !important;
         padding: 5px 0px !important;
-.logo{
-    display: block !important;
-    width: fit-content !important;
-    height:  fit-content !important;
-}
         img {
             display: block;
-            object-fit: cover;
+            object-fit: contain !important;
             width: fit-content !important;
-            height: 130px !important;
+            height: 100px !important;
             overflow: hidden;
             margin: 0px !important;
             filter: brightness(0) invert(1);
             transition: all 0.3s linear;
-
-            @media (max-width: 991px) {
-                filter: none;
-            }
-
             @media (max-width: 767px) {
-                height: 100px !important;
+                height: 70px !important;
             }
         }
 
@@ -56,10 +41,28 @@ header {
             }
         }
 
-        .navbar-collapse {
+        .mysidenav {
+            display: flex;
+            gap: 100px;
             @media (max-width: 991px) {
-                border-top: 2px solid $secondary-color !important;
-                margin-top: 20px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                background-color: #363636;
+                padding: 20px;
+                min-width: 450px;
+                height: 100vh;
+                display: none;
+            }
+
+            .navbar-toggler {
+                display: none;
+                margin-left: auto;
+                margin-bottom: 0px;
+
+                @media (max-width: 991px) {
+                    display: block;
+                }
             }
 
             .navbar-nav {
@@ -78,20 +81,10 @@ header {
                         letter-spacing: 1px;
                         color: white !important;
                         text-transform: uppercase;
-
-                        @media (max-width: 991px) {
-                            color: black !important;
-
-                        }
                     }
 
                     .active {
                         color: white !important;
-
-                        @media (max-width: 991px) {
-                            color: black !important;
-
-                        }
                     }
                 }
             }
@@ -127,12 +120,12 @@ header.sticky-header {
         height: 80px;
         width: fit-content !important;
         filter: brightness(0) invert(1) !important;
+        height: 70px;
     }
 
-    .navbar-collapse {
+    .mysidenav {
         .navbar-nav {
             .nav-item {
-
                 .nav-link {
                     color: white !important;
 

@@ -487,34 +487,23 @@ header {
   z-index: 9;
   position: fixed;
   top: 0px;
-  width: 100%; }
-  @media (max-width: 991px) {
-    header {
-      position: relative;
-      background-color: white;
-      z-index: 99999; } }
+  width: 100%;
+  z-index: 99999; }
   header .navbar {
     background-color: transparent !important;
     padding: 5px 0px !important; }
-    header .navbar .logo {
-      display: block !important;
-      width: fit-content !important;
-      height: fit-content !important; }
     header .navbar img {
       display: block;
-      object-fit: cover;
+      object-fit: contain !important;
       width: fit-content !important;
-      height: 130px !important;
+      height: 100px !important;
       overflow: hidden;
       margin: 0px !important;
       filter: brightness(0) invert(1);
       transition: all 0.3s linear; }
-      @media (max-width: 991px) {
-        header .navbar img {
-          filter: none; } }
       @media (max-width: 767px) {
         header .navbar img {
-          height: 100px !important; } }
+          height: 70px !important; } }
     header .navbar .navbar-toggler {
       background-color: #991B1C !important;
       color: white !important; }
@@ -528,42 +517,52 @@ header {
         @media (max-width: 440px) {
           header .navbar .navbar-toggler .navbar-toggler-icon {
             font-size: 16px !important; } }
-    @media (max-width: 991px) {
-      header .navbar .navbar-collapse {
-        border-top: 2px solid #991B1C !important;
-        margin-top: 20px; } }
-    header .navbar .navbar-collapse .navbar-nav {
-      flex: 1;
-      justify-content: center; }
-      header .navbar .navbar-collapse .navbar-nav .nav-item {
-        padding: 10px; }
-        @media (max-width: 1199px) {
-          header .navbar .navbar-collapse .navbar-nav .nav-item {
-            padding: 5px; } }
-        header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-          font-size: 18px;
-          letter-spacing: 1px;
-          color: white !important;
-          text-transform: uppercase; }
-          @media (max-width: 991px) {
-            header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-              color: black !important; } }
-        header .navbar .navbar-collapse .navbar-nav .nav-item .active {
-          color: white !important; }
-          @media (max-width: 991px) {
-            header .navbar .navbar-collapse .navbar-nav .nav-item .active {
-              color: black !important; } }
-    header .navbar .navbar-collapse .contact-number {
-      color: white; }
+    header .navbar .mysidenav {
+      display: flex;
+      gap: 100px; }
       @media (max-width: 991px) {
-        header .navbar .navbar-collapse .contact-number {
+        header .navbar .mysidenav {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          background-color: #363636;
+          padding: 20px;
+          min-width: 450px;
+          height: 100vh;
           display: none; } }
-      header .navbar .navbar-collapse .contact-number .number {
-        font-size: 20px;
-        font-family: "Redressed", cursive;
-        letter-spacing: 1px; }
-      header .navbar .navbar-collapse .contact-number .text-label {
-        font-size: 16px; }
+      header .navbar .mysidenav .navbar-toggler {
+        display: none;
+        margin-left: auto;
+        margin-bottom: 0px; }
+        @media (max-width: 991px) {
+          header .navbar .mysidenav .navbar-toggler {
+            display: block; } }
+      header .navbar .mysidenav .navbar-nav {
+        flex: 1;
+        justify-content: center; }
+        header .navbar .mysidenav .navbar-nav .nav-item {
+          padding: 10px; }
+          @media (max-width: 1199px) {
+            header .navbar .mysidenav .navbar-nav .nav-item {
+              padding: 5px; } }
+          header .navbar .mysidenav .navbar-nav .nav-item .nav-link {
+            font-size: 18px;
+            letter-spacing: 1px;
+            color: white !important;
+            text-transform: uppercase; }
+          header .navbar .mysidenav .navbar-nav .nav-item .active {
+            color: white !important; }
+      header .navbar .mysidenav .contact-number {
+        color: white; }
+        @media (max-width: 991px) {
+          header .navbar .mysidenav .contact-number {
+            display: none; } }
+        header .navbar .mysidenav .contact-number .number {
+          font-size: 20px;
+          font-family: "Redressed", cursive;
+          letter-spacing: 1px; }
+        header .navbar .mysidenav .contact-number .text-label {
+          font-size: 16px; }
 
 header.sticky-header {
   background-color: #424242;
@@ -573,12 +572,13 @@ header.sticky-header {
   header.sticky-header img {
     height: 80px;
     width: fit-content !important;
-    filter: brightness(0) invert(1) !important; }
-  header.sticky-header .navbar-collapse .navbar-nav .nav-item .nav-link {
+    filter: brightness(0) invert(1) !important;
+    height: 70px; }
+  header.sticky-header .mysidenav .navbar-nav .nav-item .nav-link {
     color: white !important; }
-  header.sticky-header .navbar-collapse .navbar-nav .nav-item .active {
+  header.sticky-header .mysidenav .navbar-nav .nav-item .active {
     color: white !important; }
-  header.sticky-header .navbar-collapse .contact-number {
+  header.sticky-header .mysidenav .contact-number {
     color: white !important; }
 
 footer {

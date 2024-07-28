@@ -67,10 +67,6 @@
                   <ul>
                      <li class="Wishlist add-to-wishlist" data-pcount="{{ $loop->iteration}}" data-section="numberTrendingProduct"><a data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist" href=""><i class="far fa-heart"></i></a></li>
                      <li class="View-details"><a data-bs-toggle="tooltip" data-bs-placement="left" title="View details" href="{{ route('main_product', [$trending_product->slug]) }}"><i class="fas fa-search"></i></a></li>
-                     {{--
-                     <li class="Compare"><a data-bs-toggle="tooltip" data-bs-placement="left"
-                        title="Add to Compare" href=""><i class="fas fa-sync-alt"></i></a></li>
-                     --}}
                   </ul>
                </div>
                @if(($trending_product->discount_percent != '') || ($trending_product->discount_percent > 0))
