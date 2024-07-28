@@ -527,9 +527,12 @@ header {
           right: 0px;
           background-color: #363636;
           padding: 20px;
-          min-width: 450px;
+          min-width: 350px;
           height: 100vh;
           display: none; } }
+      @media (max-width: 480px) {
+        header .navbar .mysidenav {
+          min-width: 100%; } }
       header .navbar .mysidenav .navbar-toggler {
         display: none;
         margin-left: auto;
@@ -662,6 +665,9 @@ footer {
   transform: translate(0, -50%);
   height: 40px;
   width: 40px; }
+  @media (max-width: 480px) {
+    .banner .banner-slider .slick-arrow {
+      display: none; } }
 .banner .banner-slider .slick-prev {
   left: 20px; }
 .banner .banner-slider .slick-next {

@@ -50,11 +50,13 @@ header {
                 right: 0px;
                 background-color: #363636;
                 padding: 20px;
-                min-width: 450px;
+                min-width: 350px;
                 height: 100vh;
                 display: none;
             }
-
+            @media (max-width: 480px) {
+           min-width: 100%;
+            }
             .navbar-toggler {
                 display: none;
                 margin-left: auto;
