@@ -19,9 +19,10 @@ header {
                 margin: 0px !important;
                 filter: brightness(0) invert(1);
                 transition: all 0.3s linear;
-                @media (max-width: 767px) {
-                    height: 70px !important;
-                }
+          
+            }
+            @media (max-width: 767px) {
+                max-width: 80px; 
             }
         }
     
