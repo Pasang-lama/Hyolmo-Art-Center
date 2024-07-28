@@ -494,7 +494,7 @@ header {
     padding: 5px 0px !important; }
     header .navbar .logo {
       display: inline-block;
-      max-width: 200px; }
+      max-width: 100px; }
       header .navbar .logo img {
         object-fit: contain !important;
         max-width: 100%;
@@ -571,7 +571,7 @@ header.sticky-header {
   top: 0px;
   box-shadow: 0px 0px 4px gray; }
   header.sticky-header img {
-    max-width: 150px !important;
+    max-width: 70px !important;
     filter: brightness(0) invert(1) !important; }
   header.sticky-header .mysidenav .navbar-nav .nav-item .nav-link {
     color: white !important; }
