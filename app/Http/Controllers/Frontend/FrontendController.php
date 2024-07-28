@@ -485,7 +485,7 @@ class FrontendController extends Controller
                 "message" => $request->message,
             ];
 
-            Mail::to($this->emailAddress)->send(
+            Mail::to(env("MAIL_FROM_ADDRESS"))->send(
                 new \App\Mail\ContactMailable($data)
             );
             if ($request->ajax()) {
