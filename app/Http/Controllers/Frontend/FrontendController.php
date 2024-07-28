@@ -484,7 +484,6 @@ class FrontendController extends Controller
                 "contact" => $request->contact,
                 "message" => $request->message,
             ];
-
             Mail::to(env("MAIL_FROM_ADDRESS"))->send(
                 new \App\Mail\ContactMailable($data)
             );
@@ -501,7 +500,7 @@ class FrontendController extends Controller
             } else {
                 return redirect()->back()->with(
                     "error_msg",
-                    "Contact message cannotnot sent. Please try again"
+                    "Contact message cannotnot sent. Please try again ,  $e"
                 );
             }
         }
