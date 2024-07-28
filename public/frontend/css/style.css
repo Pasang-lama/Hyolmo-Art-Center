@@ -507,10 +507,6 @@ header {
     header .navbar .navbar-toggler {
       background-color: #991B1C !important;
       color: white !important; }
-      @media (max-width: 440px) {
-        header .navbar .navbar-toggler {
-          padding: 3px !important;
-          font-size: 16px !important; } }
       header .navbar .navbar-toggler .navbar-toggler-icon {
         background-image: none !important;
         padding: 5px; }
