@@ -33,7 +33,7 @@ class FrontendController extends Controller
     {
         $this->record_per_page = 15;
         $this->middleware(["XssSanitizer"]);
-        $this->emailAddress = "amilmdr502@gmail.com";
+        $this->emailAddress = "pasanglama66666@gmail.com";
     }
 
     public function home()
@@ -95,13 +95,6 @@ class FrontendController extends Controller
         );
     }
 
-    // public function shop()
-    // {
-    //     $categories = Category::whereNull("parent_id")
-    //         ->where("status", "1")
-    //         ->get();
-    //     return view("frontend/pages/category", compact("categories"));
-    // }
 
     public function single_category($slug)
     {
@@ -218,21 +211,6 @@ class FrontendController extends Controller
             abort(404);
         }
     }
-
-    // public function findsize(Request $request)
-    // {
-    //     $data = ProductAttribute::where([
-    //         "product_id" => $request->id,
-    //         "color_name" => $request->color,
-    //     ])
-    //         ->where("stock", ">", 0)
-    //         ->get();
-
-    //     $sizes = $data->unique("size");
-
-    //     $data_json = ["sizes" => $sizes, "data" => $data];
-    //     return response()->json($data_json);
-    // }
 
     public function products($slug)
     {
@@ -511,19 +489,19 @@ class FrontendController extends Controller
                 new \App\Mail\ContactMailable($data)
             );
             if ($request->ajax()) {
-                return response()->json(["success" => "Contact us message sent"]);
+                return response()->json(["success" => "Contact message sent sucessfully"]);
             } else {
                 return redirect()
                     ->back()
-                    ->with("success_msg", "Contact us message sent");
+                    ->with("success_msg", "Contact message sent sucessfully");
             }
         } catch (\Exception $e) {
             if ($request->ajax()) {
-                return response()->json(["error" => "Contact us message not sent"]);
+                return response()->json(["error" => "Contact message cannotnot sent. Please try again"]);
             } else {
                 return redirect()->back()->with(
                     "error_msg",
-                    "Contact us message not sent"
+                    "Contact message cannotnot sent. Please try again"
                 );
             }
         }
